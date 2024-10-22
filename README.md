@@ -5,3 +5,5 @@
 </p>
 
 ---
+
+https://html-preview.github.io/?url=https://raw.githubusercontent.com/JoaoVictorRR-GitHub/Geracao-Comercio/main/index.html
