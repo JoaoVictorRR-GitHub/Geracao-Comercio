@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*  CONFIGURACAO GERAL DOS LINKS.   */
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(128, 255, 114);
+}
+a[id="top"]{
+    right: 0;
+    color: white;
+    position: absolute;
+    text-shadow: 2px 2px black;
+    border-radius: 150px 150px 100px 100px;
+    background-color: rgb(165, 165, 165);
+}
+nav[id="navPagina"]>a[id="pagAtual"], a:active {
+    color: rgb(255, 240, 124);
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO GERAL DO HEADER.   */
+header {
+    display: flex;
+    padding: 1% 5%;
+    font-size: large;
+    align-items: center;
+    font-family: fantasy;
+    background: rgb(165, 165, 165);
+}
+
+/*  CONFIGURACAO DO TITULO. */
+header nav[id="navTitulo"] {
+    margin-right: auto;
+    font-size: xx-large;
+    text-shadow: 3px 3px rgb(12, 124, 89);
+}
+
+/*  CONFIGURACAO GERAL DA BARRA DE NAVEGACAO.   */
+header nav[id="navPagina"] > a {
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-shadow: 3px 3px black;
+    background-color: rgb(12, 124, 89);
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO DA PAGINA 'INICIO'.    */
+.mainA {
+    padding: 5%;
+    color: white;
+    font-size: large;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('Guarda-Corpo.jpg');
+}
+.mainA h1 {
+    font-size: 45px;
+    text-decoration: underline;
+    color: rgb(128, 255, 114);
+    text-underline-offset: 25px;
+    text-shadow: 3px 5px black;
+}
+.mainA h2 {
+    font-size: 35px;
+    color: rgb(255, 240, 124);
+    text-shadow: 3px 3px black;
+}
+.mainA h3 {
+    color: rgb(255, 240, 124);
+    color: rgb(12, 124, 89);
+    text-shadow: 2px 2px black;
+}
+.mainA p {
+    margin-left: 25%;
+    margin-right: 25%;
+    line-height: 30px;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mainA nav > a {
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-family: fantasy;
+    display: inline-block;
+    text-shadow: 2px 2px black;
+    background-color: rgb(12, 124, 89);
+}
+.mainA nav > a+a {
+    background-color: transparent;
+    background-color: rgb(130, 46, 129);
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO DA PAGINA 'SOBRE NOS'. */
+div[id="imag"] {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('SobreFundo.png');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+}
+.mainB nav {
+    top: 0;
+    padding: 1%;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    background-color: rgb(12, 124, 89);
+}
+.mainB a {
+    padding: 10px;
+    color: forestgreen;
+    margin: 0px 20px;
+    border-radius: 10px;
+    font-family: fantasy;
+    text-shadow: 2px 2px white;
+    background-color: greenyellow;
+}
+.mainB a:hover {
+    color: orangered;
+    text-shadow: 1px 1px black;
+    background-color: rgb(255, 240, 124);
+}
+.mainB a:active {
+    color: forestgreen;
+    text-shadow: 2px 2px white;
+    background-color: white;
+}
+.mainB section {
+    padding: 0px 15%;
+    margin: 100px 0px;
+}
+.mainB section h1 {
+    font-size: 40px;
+    text-align: center;
+    color: orangered;
+    letter-spacing: 2px;
+    font-family: fantasy;
+    text-shadow: 2px 2px rgb(63, 71, 57);
+}
+.mainB section p {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: justify;
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO DA PAGINA 'NOSSA LINHA'.   */
+.mainC nav {
+    top: 0;
+    padding: 1%;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    background-color: rgb(12, 124, 89);
+}
+.mainC a {
+    padding: 10px;
+    color: forestgreen;
+    margin: 0px 20px;
+    border-radius: 10px;
+    font-family: fantasy;
+    text-shadow: 2px 2px white;
+    background-color: greenyellow;
+}
+.mainC a:hover {
+    color: orangered;
+    text-shadow: 1px 1px black;
+    background-color: rgb(255, 240, 124);
+}
+.mainC a:active {
+    color: forestgreen;
+    background-color: white;
+    text-shadow: 2px 2px white;
+}
+a[id="top"]{
+    right: 0;
+    color: white;
+    position: absolute;
+    text-shadow: 2px 2px black;
+    border-radius: 150px 150px 100px 100px;
+    background-color: rgb(165, 165, 165);
+}
+.mainC h1 {
+    margin: 0;
+    padding: 50px 20%;
+    text-align: center;
+    background-color: wheat;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.mainC > h2 {
+    margin: 0;
+    padding: 30px;
+    border: solid 1px;
+    text-align: center;
+    font-family: fantasy;
+    background-color: rgb(255, 240, 124);
+}
+.mainC section {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    
+}
+.mainC section article {
+    margin: auto;
+    width: 250px;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color: gainsboro;
+}
+.mainC section h2 {
+    font-size: larger;
+    text-align: center;
+}
+.mainC section img {
+    border: solid 1px;
+}
+.mainC section div {
+    padding: 10px;
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO DA PAGINA 'FALE CONOSCO'.  */
+iframe[id="mapa"]{
+    width: 99%;
+    border: solid;
+    border-radius: 1px;
+    border-color: rgb(12, 124, 89);
+}
+.mainD {
+    display: flex;
+    padding: 50px 0px;
+    align-items: center;
+    flex-direction: column;
+}
+.mainD section {
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(12, 124, 89);
+}
+.mainD section h1 {
+    padding: 10px;
+    letter-spacing: 3px;
+    font-family: fantasy;
+    background-color: rgb(128, 255, 114);
+}
+.mainD section ul {
+    padding: 10px;
+    font-size: 15px;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mainD section ul li {
+    align-items: center;
+    display: inline-flex;
+}
+.mainD section ul li a {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.mainD section ul li img {
+    margin-right: 10px;
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO GERAL DO FOOTER.   */
+footer {
+    padding: 3px 0;
+    color: white;
+    text-align: center;
+    background: rgb(165, 165, 165);
+}
+
+/*===================================================*/
+/*===================================================*/
+/*===================================================*/
+
+/*  CONFIGURACAO MOBILE DO HEADER.  */
+@media screen and (max-width: 1000px) {
+    header {
+        flex-direction: column;
+    }
+    header nav[id="navPagina"] {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        align-self: flex-end;
+    }
+}
+
+/*  CONFIGURACAO MOBILE DA PAGINA 'NOSSA LINHA'.    */
+@media screen and (max-width: 850px) {
+    .mainC section {
+        flex-direction: column;
+    }
+    .mainC section article {
+        margin-top: 10px;
+    }
+}
+
+/*  CONFIGURACAO MOBILE DOS BOTOES PAGINA INICIAL.  */
+@media screen and (max-width: 735px) {
+    .mainA nav a {
+        margin-top: 15px;
+    }
+}
+
+/*  CONFIGURACAO MOBILE DA INTRODUCAO NA PAGINA INICIAL.    */
+@media screen and (max-width: 695px) {
+    .mainA h1 {
+        line-height: 80px;
+    }
+}
+
+/*  CONFIGURACAO MOBILE DO HEADER E DO FOOTER.  */
+@media screen and (max-width: 600px) {
+    header nav[id="navTitulo"] {
+        font-size: x-large;
+    }
+    header nav[id="navPagina"] > a {
+        margin: 0px 2px;
+        font-size: small;
+        display: inline-block;
+    }
+    footer{
+        font-size: x-small;
+    }
+}
+
+/*  CONFIGURACAO MOBILE DO HEADER NAV.  */
+@media screen and (max-width: 365px) {
+    header nav[id="navPagina"] > a {
+        font-size: X-small;
+    }
+}

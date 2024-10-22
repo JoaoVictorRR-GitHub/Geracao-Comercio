@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt_PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Geração Comércio e Seriços </title>
+    <link rel="stylesheet" href="esitlos.css">
+</head>
+<body>
+    <header id="Topo">
+        <nav id="navTitulo">
+            <a href="index.html"> Geração Comércio e Serviços </a>
+        </nav>
+        <nav id="navPagina">
+            <a href="index.html"> Início </a>
+            <a href="sobre.html"> Sobre Nós </a>
+            <a href="nossaLinha.html" id="pagAtual"> Nossa Linha </a>
+            <a href="contatos.html"> Fale Conosco </a>
+        </nav>
+    </header>
+    <main class="mainC">
+        <nav>
+            <a href="#Cozinha"> Cozinha Industrial </a>
+            <a href="#Agroindustria"> Agroindustria </a>
+            <a href="#Hospitalar"> Hospitalar </a>
+            <a href="#Topo" id="top"> Topo </a>
+        </nav>
+        <h1> Projetamos de acordo com a <br> necessidade de cada cliente </h1>
+        <h2 id="Cozinha"> Cozinha Industrial </h2>
+        <section id="produtoCozinha">
+        </section>
+        <h2 id="Agroindustria"> Agroindustria </h2>
+        <section id="produtoAgro">
+        </section>
+        <h2 id="Hospitalar"> Hospitalar </h2>
+        <section id=produtoHospitalar>
+        </section>
+        <iframe src="" frameborder="0"></iframe>
+    </main>
+    <script>
+
+        // Classe de produtos.
+        class Produto {
+
+            indiceIMG = 0;
+            DiretorioIMG = "Imagens/";
+
+            // Construtor da classe.
+            constructor(IDsecao, IDimagem, Titulo, Imagens, Descricao) {
+                this.IDsecao    = IDsecao;
+                this.IDimagem   = IDimagem;
+                this.Titulo     = Titulo;
+                this.Imagens    = Imagens;
+                this.Descricao  = Descricao;
+            }
+
+            // Metodo para gerar o produto em uma secao da pagina.
+            gerarProduto() {
+                const secao = document.getElementById(this.IDsecao);
+                const artigo = document.createElement('article');
+                artigo.innerHTML = `
+                    <h2>${this.Titulo}</h2>
+                    <img id="${this.IDimagem}" src="${this.DiretorioIMG}${this.Imagens[0]}" width="100%">
+                    <div>
+                        <h3>Descrição</h3>
+                        <p>${this.Descricao}</p>
+                    </div>
+                `;
+                secao.appendChild(artigo);
+            }
+
+            // Metodo para trocar a imagem do produto.
+            trocarImagem() {
+                document.getElementById(this.IDimagem).src = this.DiretorioIMG + this.Imagens[this.indiceIMG];
+                this.indiceIMG = (this.indiceIMG + 1) % this.Imagens.length;
+            }
+        }
+
+        // Imagens de cada produto.
+        const MesasNecropsia    = ["MesaN_01.png",              "MesaN_02.png",             "MesaN_03.png",             "MesaN_04.png"];
+        const CamasMaca         = ["CamaMaca_01.png",           "CamaMaca_02.png",          "CamaMaca_03.png",          "CamaMaca_04.png"];
+        const TanquesFormol     = ["TanqueFormol_01.jpg",       "TanqueFormol_02.jpg",      "TanqueFormol_03.jpg",      "TanqueFormol_04.jpg"];
+        const CarrosPrateleira  = ["CarroPrateleira_01.png",    "CarroPrateleira_02.jpg",   "CarroPrateleira_03.jpg",   "CarroPrateleira_04.jpg"];
+        const CarrosTartaruga   = ["CarroTartaruga_01.jpg",     "CarroTartaruga_02.jpg",    "CarroTartaruga_03.jpg",    "CarroTartaruga_04.jpg"];
+        const CarrosPlataforma  = ["Plataforma01.png",  "Plataforma02.png", "Plataforma03.png", "Plataforma04.png"];
+        const DecantadoresMel   = ["Decantador01.jpg",  "Decantador02.jpg", "Decantador03.jpg", "Decantador04.jpg"];
+        const MisturadoresY     = ["Misturador01.jpg",  "Misturador02.jpg", "Misturador03.jpg", "Misturador04.jpg"];
+        const MesasEvisceracao  = ["MesaEV_01.png",     "MesaEV_02.png",    "MesaEV_03.png",    "MesaEV_04.png"];
+
+        // Produtos para Cozinha Industrial.
+        const produtoC0 = new Produto('produtoCozinha', 'produtoC0', 'Carro Prateleira Inox',CarrosPrateleira, 'Carro Prateleira de Inox para cozinha industrial.');
+        const produtoC1 = new Produto('produtoCozinha', 'produtoC1', 'Carro Tartaruga Inox', CarrosTartaruga,  'Carro tartaruga de Inox para cozinha industrial.');
+        const produtoC2 = new Produto('produtoCozinha', 'produtoC2', 'Carro Plataforma Inox', CarrosPlataforma, 'Carro plataforma de Inox para cozinha industrial.');
+
+        // Produtos para Agroindustria.
+        const produtoA0 = new Produto('produtoAgro', 'produtoA0', 'Decantador de Mel', DecantadoresMel, 'Decantador de mel.');
+        const produtoA1 = new Produto('produtoAgro', 'produtoA2', 'Misturador de Ração em Y', MisturadoresY, 'Misturador de ração em Y.');
+        const produtoA2 = new Produto('produtoAgro', 'produtoA1', 'Mesa de Evisceração', MesasEvisceracao, 'Mesa de evisceração.');
+
+        // Produtos Hospitalares.
+        const produtoH0 = new Produto('produtoHospitalar', 'produtoH0', 'Mesa Inox Necrópsia', MesasNecropsia, 'Mesa de Inox para Necrópsia.');
+        const produtoH1 = new Produto('produtoHospitalar', 'produtoH1', 'Cama Maca Inox', CamasMaca, 'Cama Maca de Inox.');
+        const produtoH2 = new Produto('produtoHospitalar', 'produtoH2', 'Reservatório Inox Formol', TanquesFormol, 'Reservatório de Inox para Formol.');
+
+        const produtos = [produtoC0, produtoC1, produtoC2, produtoA0, produtoA1, produtoA2, produtoH0, produtoH1, produtoH2];
+        
+        // Loop para gerar os produtos de cada secao da pagina.
+        for (let produtoI of produtos) { produtoI.gerarProduto(); }
+
+        // Metodo para trocar a imagem de todos os produtos.
+        function trocarImagemProdutos() {
+            for (let produtoI of produtos)
+                produtoI.trocarImagem();
+        }
+        setInterval(trocarImagemProdutos, 5000);
+    </script>
+    <script>
+        // Funcao para rolar a pagina suavemente ate uma ancora.
+        function animarScrollAncora(ID) {
+            const ancora = document.querySelector(ID);
+            const posicaoAlvo = ancora.getBoundingClientRect().top +window.scrollY -60;
+            window.scrollTo({top: posicaoAlvo, behavior: 'smooth'});
+        }
+
+        Artigos = ["#Cozinha", "#Agroindustria", "#Hospitalar", "#Topo"];
+
+        // Loop para adicionar ouvintes de evento para a ancora dos artigos.
+        for (const Artigo of Artigos) {
+            document.querySelector(`a[href="${Artigo}"]`).addEventListener('click', function(event) {
+                event.preventDefault();
+                animarScrollAncora(Artigo);
+            });
+        }
+    </script>
+    <footer>
+        <p> Copyright © 2024 Geracao Comércio e Serviços (27) 3282-4311 </p>
+        <p> @ JoaoVictorRR-GitHub </p>
+    </footer>
+</body>
+</html>

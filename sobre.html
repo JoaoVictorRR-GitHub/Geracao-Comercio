@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt_PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Geração Comércio e Seriços </title>
+    <link rel="stylesheet" href="esitlos.css">
+</head>
+<body>
+    <header id="Topo">
+        <nav id="navTitulo">
+            <a href="index.html"> Geração Comércio e Serviços </a>
+        </nav>
+        <nav id="navPagina">
+            <a href="index.html"> Início </a>
+            <a href="sobre.html" id="pagAtual"> Sobre Nós </a>
+            <a href="nossaLinha.html"> Nossa Linha </a>
+            <a href="contatos.html"> Fale Conosco </a>
+        </nav>
+    </header>
+    <div id="imag"></div> <!--Imagem-->
+    <main class="mainB">
+        <nav>
+            <a href="#Historia"> Nossa História </a>
+            <a href="#Empresa"> Nossa Empresa </a>
+            <a href="#Missao"> Nossa Missão </a>
+            <a href="#Topo" id="top">  Topo </a>
+        </nav>
+        <section id="Historia">
+            <h1> História </h1>
+            <p> Fundada em 2006, a Geração Comércio e Serviços nasceu com o propósito de atender a todos os setores. Executamos serviços e comercializamos produtos fabricados em aço inox e em aço carbono. Dentre eles, bancadas inox, mesas inox, corrimão, defumador, equipamentos para indústria de laticínio, entre outros. </p>
+        </section>
+        <section id="Empresa">
+            <h1> Nossa Empresa </h1>
+            <p> Nossa Empresa vem registrando expressivo crescimento no seguimento comercial e também se preparando para atuar no competitivo mercado de serviços, oferecendo aos clientes soluções eficientes e modernas às suas necessidades com qualidade e rapidez. </p>
+            <p> Atuamos na comercialização dos mais diversos equipamentos, atendendo ao cliente no regime de demanda, alcançando assim a melhor relação custo x benefício. </p>
+            <p> Atualmente atendemos empresas públicas e privadas em tudo que se relaciona à metal-mecânica. </p>
+        </section>
+        <section id="Missao">
+            <h1> Missão </h1>
+            <p> Temos como missão ser uma empresa consciente de sua responsabilidade social, gerando benefícios à comunidade, clientes, colaboradores e fornecedores. </p>
+            <p> As expectativas de nossos clientes devem ser superadas. Visamos oferecer soluções com excelência e alto padrão de qualidade e, consequentemente, ser uma empresa de destaque em nossa área de atuação. </p>
+        </section>
+        <script>
+            // Funcao para rolar a pagina suavemente ate uma ancora.
+            function animarScrollAncora(ID) {
+                const ancora = document.querySelector(ID);
+                const posicaoAlvo = ancora.getBoundingClientRect().top +window.scrollY -90;
+                window.scrollTo({top: posicaoAlvo, behavior: 'smooth'});
+            }
+
+            Artigos = ["#Historia", "#Empresa", "#Missao", "#Topo"];
+
+            // Loop para adicionar ouvintes de evento para a ancora dos artigos.
+            for (const Artigo of Artigos) {
+                document.querySelector(`a[href="${Artigo}"]`).addEventListener('click', function(event) {
+                    event.preventDefault();
+                    animarScrollAncora(Artigo);
+                });
+            }
+        </script>
+    </main>
+    <footer>
+        <p> Copyright © 2024 Geracao Comércio e Serviços (27) 3282-4311 </p>
+        <p> @ JoaoVictorRR-GitHub </p>
+    </footer>
+</body>
+</html>

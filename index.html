@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt_PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Geração Comércio e Seriços </title>
+   <link rel="stylesheet" href="esitlos.css">
+</head>
+<body>
+    <header>
+        <nav id="navTitulo">
+            <a href="index.html"> Geração Comércio e Serviços </a>
+        </nav>
+        <nav id="navPagina">
+            <a href="index.html" id="pagAtual"> Início </a>
+            <a href="sobre.html"> Sobre Nós </a>
+            <a href="nossaLinha.html"> Nossa Linha </a>
+            <a href="contatos.html"> Fale Conosco </a>
+        </nav>
+    </header>
+    <main class="mainA">
+        <h1> HÁ +10 ANOS NO MERCADO </h1>
+        <h2 id="h2loop"> EXECUTANDO SEU PROJETO </h2>
+        <script>
+            var indiceAtual = 0;
+            const nomes = ["EXECUTANDO SEU PROJETO", "EM INOX", "E AÇO CARBONO"];
+    
+            // Função para alternar os nomes.
+            function alternarNomes() {
+                document.getElementById("h2loop").innerHTML = nomes[indiceAtual];
+                indiceAtual = (indiceAtual +1) % nomes.length;
+            }
+            setInterval(alternarNomes, 2500);   // Timer.
+        </script>
+        <h3> Serviços e Projetos </h3>
+        <p> Mesa, Bancada, Prateleira, Corrimão, Tanque para fabricação de queijo, Prensa para queijo e Muitos outros
+            produtos, Tudo em aço inox. </p>
+        <h3> Estamos em Serra no Espírito Santo </h3>
+        <nav>
+            <a href="nossaLinha.html"> CONHEÇA NOSSOS PRODUTOS E NOSSA LINHA DE PRODUÇÃO </a>
+            <a href="contatos.html"> FALE CONOSCO </a>
+        </nav>
+    </main>
+    <footer>
+        <p> Copyright © 2024 Geracao Comércio e Serviços (27) 3282-4311 </p>
+        <p> @ JoaoVictorRR-GitHub </p>
+    </footer>
+</body>
+</html>
